@@ -1,0 +1,9 @@
+{
+  "name": "calculadora-servicos-zakka",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Calculadora de Troca de Tela Original e Troca de Vidro com consulta à Zakka Cell",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}
