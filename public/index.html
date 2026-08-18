@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1769aa" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>Calculadora de Serviços</title>
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brandmark">NS</div>
+      <div>
+        <p class="eyebrow">ORÇAMENTO RÁPIDO</p>
+        <h1>Calculadora de Serviços</h1>
+      </div>
+    </header>
+
+    <section class="service-switch" aria-label="Escolha o serviço">
+      <button class="service-btn active" data-service="screen">
+        <span class="service-icon">▣</span>
+        <span><strong>Troca de Tela</strong><small>Original</small></span>
+      </button>
+      <button class="service-btn" data-service="glass">
+        <span class="service-icon">◇</span>
+        <span><strong>Troca de Vidro</strong><small>Tela original</small></span>
+      </button>
+    </section>
+
+    <section class="search-card">
+      <label for="model">Modelo do aparelho</label>
+      <div class="search-row">
+        <input id="model" type="search" autocomplete="off" enterkeyhint="search" placeholder="Ex.: A55, S24, iPhone 13" />
+        <button id="searchBtn" type="button" aria-label="Pesquisar">Pesquisar</button>
+      </div>
+      <p class="hint">Digite o modelo para consultar a tela original disponível.</p>
+    </section>
+
+    <section id="status" class="status hidden" role="status"></section>
+    <section id="results" class="results" aria-live="polite"></section>
+
+    <footer>
+      <span class="dot"></span>
+      Preços consultados automaticamente no fornecedor
+    </footer>
+  </main>
+
+  <template id="resultTemplate">
+    <article class="result-card">
+      <div class="result-head">
+        <div>
+          <span class="badge"></span>
+          <h2 class="product"></h2>
+        </div>
+        <span class="check">✓</span>
+      </div>
+      <div class="price-grid">
+        <div class="price-block card-price">
+          <span>Cartão</span>
+          <strong class="card-total"></strong>
+          <small class="installment"></small>
+        </div>
+        <div class="price-block cash-price">
+          <span>PIX / Dinheiro</span>
+          <strong class="cash-total"></strong>
+          <small>10% de desconto</small>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="/app.js"></script>
+</body>
+</html>
